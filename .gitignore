@@ -5,6 +5,7 @@ outputs/
 # Local environment files
 .env
 .env.*
+!.env.example
 
 # Logs
 logs

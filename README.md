@@ -8,8 +8,23 @@
 - 山野、江河湖泊、城市烟火、海岸、人文古迹五类足迹
 - 地点搜索、类别筛选、足迹详情与旅程时间线
 - 旅行统计：打卡数量、串联距离、南北跨度、偏爱风景
+- 高德地理编码：输入地点自动补全坐标，点地图可反查地址
+- OSS 图床上传：为足迹上传照片，并把照片作为记忆卡封面
 - 新增足迹表单，数据自动保存在浏览器本地
 - 示例数据一键恢复、当前足迹删除
+
+## 图床配置
+
+本地开发需要在 `.env.local` 中配置 OSS 信息，可参考 `.env.example`：
+
+```bash
+VITE_ALI_OSS_REGION=oss-cn-beijing
+VITE_ALI_OSS_BUCKET=slai-78
+VITE_ALI_OSS_ACCESS_KEY_ID=your-access-key-id
+VITE_ALI_OSS_ACCESS_KEY_SECRET=your-access-key-secret
+```
+
+当前为了快速演示使用前端直传。正式上线时建议改成后端签发 STS 临时凭证，避免长期 AccessKey 出现在前端构建产物里。
 
 ## 本地运行
 
