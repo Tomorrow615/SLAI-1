@@ -1,0 +1,7 @@
+# Codex local workspace artifacts
+work/
+outputs/
+
+# Local environment files
+.env
+.env.*
