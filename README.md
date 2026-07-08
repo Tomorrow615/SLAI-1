@@ -26,6 +26,18 @@ VITE_ALI_OSS_ACCESS_KEY_SECRET=your-access-key-secret
 
 当前为了快速演示使用前端直传。正式上线时建议改成后端签发 STS 临时凭证，避免长期 AccessKey 出现在前端构建产物里。
 
+## AI 写作配置
+
+足迹详情里的"AI 辅助"（润色日志 / 生成分享文案）调用 PackyAPI（Gemini 中转 API），同样在 `.env.local` 中配置：
+
+```bash
+VITE_PACKAPI_API_KEY=your-packyapi-key
+VITE_PACKAPI_BASE_URL=https://www.packyapi.com/v1
+VITE_PACKAPI_MODEL=gemini-3-pro-preview
+```
+
+当前为了快速演示前端直连 PackyAPI，API Key 会出现在浏览器请求里；仅用于演示/自用，正式上线建议换成后端代理。
+
 ## 本地运行
 
 ```bash
